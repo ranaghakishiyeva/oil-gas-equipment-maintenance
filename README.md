@@ -95,38 +95,6 @@ The Mermaid diagram, which GitHub renders automatically, is in [`docs/er_diagram
 
 The dataset was created artificially and was not obtained from any oil and gas company. See [`data/README.md`](data/README.md) for how it was built and how to replace it with an authorised dataset.
 
-## Installation and Setup
-
-**Requirements:** MySQL 8.0.16 or later and a user that can create databases.
-
-1. Clone or download the repository and open a terminal in its root folder:
-
-   ```bash
-   git clone https://github.com/<your-username>/oil-gas-equipment-maintenance.git
-   cd oil-gas-equipment-maintenance
-   ```
-
-2. Run the scripts **in this exact order** (you will be asked for your MySQL password each time):
-
-   ```bash
-   mysql -u root -p < database/01_create_database.sql
-   mysql -u root -p < database/02_create_tables.sql
-   mysql -u root -p < database/03_insert_sample_data.sql
-   mysql -u root -p < database/04_analysis_queries.sql
-   mysql -u root -p < database/05_create_views.sql
-   ```
-
-   Replace `root` with your own MySQL user if needed. Scripts 02 to 05 select the database themselves with `USE oil_gas_maintenance;`.
-
-3. Explore the results:
-
-   ```sql
-   USE oil_gas_maintenance;
-   SELECT * FROM vw_facility_maintenance_costs ORDER BY total_cost DESC;
-   ```
-
-**Using MySQL Workbench or DBeaver:** open each file and run it as a script, in the same order (in Workbench: *File > Run SQL Script*, or open the file and press the lightning-bolt button). To study the analysis queries, open `04_analysis_queries.sql` and run one query at a time, after running the `USE` and `SET` lines at the top.
-
 ### Execution order
 
 | Step | Script | What it does |
