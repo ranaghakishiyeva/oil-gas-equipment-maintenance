@@ -142,23 +142,8 @@ Example findings from the sample data (reporting date 2026-06-30): 7 work orders
 - Set operations: `UNION ALL`
 - Views and technical documentation (Markdown, Mermaid)
 
-## Limitations and Possible Future Improvements
+## Possible Future Improvements
 
-**Limitations**
-
-- The data is synthetic and small, so results illustrate technique rather than real operating performance.
-- Work orders are not linked to the schedule that triggered them.
-- `actual_cost` is a single total; labour, parts and contractor costs are not separated.
-- Spare-part stock is not reduced automatically when parts are used.
-- Overdue logic uses a fixed reporting date; change `@as_of_date` to `CURDATE()` for live use.
-- No user accounts, audit history or equipment hierarchy (for example, a pump inside a compressor train).
-
-**Future improvements**
-
-- Add a `schedule_id` link from work orders to schedules and generate work orders automatically.
-- Add failure codes, downtime hours and MTBF/MTTR metrics.
-- Add a stock-movement table and a stored procedure that updates inventory.
-- Add contractors and purchase orders.
 - Connect the views to a BI tool such as Power BI or Tableau.
 
 ## Author
