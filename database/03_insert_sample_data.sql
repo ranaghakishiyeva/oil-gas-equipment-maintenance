@@ -1,27 +1,10 @@
--- =============================================================================
--- Project : Oil and Gas Equipment Maintenance Management (MySQL 8.0+)
--- File    : 03_insert_sample_data.sql
--- Purpose : Load the fictional sample dataset.
--- Run     : After 02_create_tables.sql. Tables are loaded parents-first so that
---           every foreign key points to an existing row.
---
 -- DISCLOSURE: All data in this project is synthetically generated for
 -- educational and portfolio demonstration purposes. It does not represent
 -- actual company records or confidential operational information.
 --
--- Reference date: the data is built around the "as of" date 2026-06-30, so some
--- work orders and schedules are overdue relative to that date.
---
 -- Row counts: facilities 7 | technicians 13 | maintenance_types 4 | equipment 37
 --             spare_parts 20 | maintenance_schedules 28 | work_orders 88
 --             work_order_parts 67
---
--- Primary key values are written explicitly (1..N in the order shown), because
--- the foreign key columns below refer to them by number. This keeps the links
--- correct even if the server uses a non-default auto_increment_increment.
---
--- Read-only validation queries are at the end of this file. They change no data.
--- =============================================================================
 
 USE oil_gas_maintenance;
 
