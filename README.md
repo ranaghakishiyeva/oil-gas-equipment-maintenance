@@ -195,11 +195,6 @@ Example findings from the sample data (reporting date 2026-06-30): 7 work orders
 
 ## Author
 
-**[Your Name]**
+Rena Aghakishiyeva
 
-- GitHub: [https://github.com/your-username](https://github.com/your-username)
-- LinkedIn: [https://www.linkedin.com/in/your-profile](https://www.linkedin.com/in/your-profile)
-
-## License
-
-This project is released under the [MIT License](LICENSE).
+- LinkedIn: https://www.linkedin.com/in/ranaaghakishiyeva
